@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -ex
+
+# This is the master script for the capsule. When you click "Reproducible Run", the code in this file will execute.
+matlab -nodisplay -r "addpath(genpath('.')); FSDecomposition"
+
+# The previous version of this file was commented-out and follows below:
+# 
+# matlab -nodisplay -r "addpath(genpath('.')); FSDecomposition"
+# 
+# # The previous version of this file was commented-out and follows below:
+# # 
+# # matlab -nodisplay -r "addpath(genpath('.')); Womersley"
+# # 
+# # # The previous version of this file was commented-out and follows below:
+# # # 
+# # # matlab -nodisplay -r "addpath(genpath('.')); readme_pulsatile"
+# # # 
+# # 
+# 
