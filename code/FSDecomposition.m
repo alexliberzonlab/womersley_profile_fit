@@ -67,10 +67,10 @@ end
 %fprintf(1,['Mean volume flow rate = ' num2str(mean(Q)) '(ml/s) \n']);
 t2=T*[0 0.125 0.25 0.375 0.5 0.625 0.75];
 
-disp(length(dt1))
-disp(length(Qraw))
-disp(length(t1))
-disp(length(Q))
+% disp(length(dt1))
+% disp(length(Qraw))
+% disp(length(t1))
+% disp(length(Q))
 
 figure;
 plot(dt1,Qraw,t1,Q);
