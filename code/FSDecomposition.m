@@ -30,8 +30,8 @@ else
 Qraw=EX3(nExp,1:(length(EX3)-1));%flow rate[ml/s]
 
 end
-dt = linspace(0,T,100);
-dt1=dt(1:(length(dt)-1));
+dt = linspace(0,T,length(Qraw));
+dt1=dt(1:(length(dt)));
 
 
 
@@ -66,6 +66,12 @@ end
 
 %fprintf(1,['Mean volume flow rate = ' num2str(mean(Q)) '(ml/s) \n']);
 t2=T*[0 0.125 0.25 0.375 0.5 0.625 0.75];
+
+disp(length(dt1))
+disp(length(Qraw))
+disp(length(t1))
+disp(length(Q))
+
 figure;
 plot(dt1,Qraw,t1,Q);
 hold on;
@@ -76,5 +82,5 @@ hold on;
 xlabel('Time (s)'); 
 ylabel('Q (ml/s)'); 
 legend('Original','Fourier Series');
-title(sprintf('set %g' ,nExp));
+
 saveas(gcf,'../results/dt_Q.png')
