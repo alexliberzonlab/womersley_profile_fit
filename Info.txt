@@ -1,0 +1,28 @@
+Case results analysis:	
+	
+Qmax (branch)	205.525
+Qmin (branch)	46.251
+Qmean (branch)	89.200
+PI (branch)	1.786
+
+Case summary:	
+	
+actual HR [BPM]=	42.50
+T period [sec]=	1.41
+samples in each period=	212.00
+HR after conversuin [BPM]=	90.00
+	
+	
+physiologic CO [L/min]=	6.00
+mean AORTIC velocity from results [m/s]=	0.02
+AORTIC flow rate coefficient=	305
+	
+measure BRANCH flow rate [ml/min]	89.20
+mean Branch velocity from results [m/s]=	0.01
+BRANCH flow rate coefficient=	10075
+	
+	
+	
+Global parameters (after conversion):	
+aortic diameter [mm]:	42
+branch diameter [mm]	18
