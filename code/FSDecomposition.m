@@ -16,10 +16,10 @@ function [KQ KQ0 KQmag KQphase Q Qf Qraw T j k n nf nt nt1 t1 w]=...
 
 % read flow rate waveform from file
 
-if nargin == 0:
+if nargin == 0,
 Qraw =[-7.7183,-8.2383,-8.6444,-8.8797,-9.6337,-10.5957,-11.8705,-10.0942,-6.2839,-1.1857,2.6043,4.4323,6.1785,7.8211,9.1311,9.9138,10.3447,10.4011,10.2807,9.8951,8.0597,5.6717,2.5232,1.3301,1.4405,1.9094,1.8145,0.8738,0.7055,0.7343,0.7788,0.7495,0.6711,-0.4796,-1.6541,-2.8643,-3.4902,-4.1714,-5.6581,-6.8024];
 
-T = length(Qraw);
+T = 1;
 nf = 10;
 
 q = Qraw;
@@ -27,11 +27,13 @@ q = Qraw;
 else
 
 
-dt = linspace(0,T,100);
-dt1=dt(1:(length(dt)-1));
 Qraw=EX3(nExp,1:(length(EX3)-1));%flow rate[ml/s]
 
 end
+dt = linspace(0,T,100);
+dt1=dt(1:(length(dt)-1));
+
+
 
 KQ = ones(1,nf)'; w = ones(1,nf)';% initialize arrays
 nt = size(dt);  nt = max(nt);
