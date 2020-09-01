@@ -1,7 +1,7 @@
 % function [KQ KQ0 KQmag KQphase Q Qf Qraw T j j32 k n nf nt nt1 t t1 w]=...
 %     FSDecomposeCheck(EX3)
-function [KQ KQ0 KQmag KQphase Q Qf Qraw T j k n nf nt nt1 t1 w]=...
-    FSDecomposeCheck(EX3,nExp,T,nf,q)
+% function [KQ KQ0 KQmag KQphase Q Qf Qraw T j k n nf nt nt1 t1 w]=...
+%     FSDecomposeCheck(EX3,nExp,T,nf,q)
 
 %clear all; close all; clc;
 
@@ -30,6 +30,7 @@ else
 Qraw=EX3(nExp,1:(length(EX3)-1));%flow rate[ml/s]
 
 end
+
 dt = linspace(0,T,length(Qraw));
 dt1=dt(1:(length(dt)));
 
@@ -54,7 +55,8 @@ KQmag = [KQ0; abs(KQ)];
 KQphase = [0.0; angle(KQ)];
 
 t1 =[0:0.001*T:(T-(dt1(2)-dt1(1)))]';
-nt1 = size(t1);  nt1 =max(nt1);                                                                                                                                                                                                                             max(nt1);
+nt1 = size(t1);  nt1 =max(nt1); 
+% max(nt1);
 
 Q = KQ0*ones(1,nt1)';
 
